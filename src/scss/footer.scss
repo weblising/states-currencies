@@ -1,0 +1,20 @@
+.footer {
+  background-color: var(--headingColor);
+  color: #fff;
+
+  &__inner {
+    height: 3.5rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__link {
+    text-decoration: underline;
+    transition: color 0.3s ease-in;
+
+    &:hover {
+      text-decoration: none;
+      color: var(--blue);
+    }
+  }
+}

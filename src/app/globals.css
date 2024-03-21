@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --textColor: #858585;
+  --headingColor: #262626;
+  --blue: #004cff;
+  --blueDark: #083f93;
+  --lightBlue: #e9f2ff;
+}
+
+.body {
+  background-color: #fff;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: var(--textColor);
+  font-size: 14px;
+}

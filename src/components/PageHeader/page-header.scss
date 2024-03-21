@@ -1,0 +1,41 @@
+.page-header {
+  font-size: 1.5rem;
+  font-weight: 800;
+  text-align: center;
+  color: var(--headingColor);
+  letter-spacing: -0.035em;
+
+  @media (min-width: 640px) {
+    font-size: 2rem;
+  }
+
+  &_disabled {
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+
+    .page-header__span {
+      filter: blur(1px);
+    }
+  }
+
+  &__span {
+    color: var(--blue);
+    border-bottom: 4px var(--blue) dotted;
+    cursor: pointer;
+    transition: 0.3s ease-in;
+    transition-property: color, border-color;
+
+    &:hover {
+      color: var(--headingColor);
+      border-bottom-color: var(--headingColor);
+    }
+  }
+}

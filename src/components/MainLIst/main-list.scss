@@ -1,0 +1,29 @@
+.main-list {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+
+  &__wrap {
+    width: 100%;
+    max-width: 980px;
+    height: calc(100vh - 12rem);
+    position: relative;
+    border-radius: 0.75rem;
+    border: 1px #ccc solid;
+    overflow: hidden;
+  }
+
+  &__inner {
+    scrollbar-width: thin;
+  }
+
+  &__item {
+    border-bottom: 1px #ccc solid;
+    > * {
+      height: 100%;
+    }
+
+    &_last {
+      border-bottom: none;
+    }
+  }
+}

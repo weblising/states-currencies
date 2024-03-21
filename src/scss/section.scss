@@ -1,0 +1,18 @@
+.section {
+  height: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &_pos {
+    &_nav {
+      background-color: var(--lightBlue);
+      padding-top: 0.75rem;
+      padding-bottom: 0.75rem;
+      position: sticky;
+      z-index: 10;
+      top: 0;
+      height: 3.5rem;
+    }
+  }
+}

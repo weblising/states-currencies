@@ -1,0 +1,109 @@
+$loaderSize: 80px;
+$transitionDelayBase: -0.036s;
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.preloader {
+  position: absolute;
+  z-index: 10;
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__inner {
+    width: $loaderSize;
+    height: $loaderSize;
+
+    > div {
+      animation: loader 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+      transform-origin: $loaderSize/2 $loaderSize/2;
+
+      &:after {
+        content: " ";
+        position: absolute;
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: var(--blue);
+        margin: -4px 0 0 -4px;
+      }
+
+      &:nth-child(1) {
+        animation-delay: $transitionDelayBase;
+
+        &:after {
+          top: 63px;
+          left: 63px;
+        }
+      }
+      &:nth-child(2) {
+        animation-delay: $transitionDelayBase * 2;
+
+        &:after {
+          top: 68px;
+          left: 56px;
+        }
+      }
+      &:nth-child(3) {
+        animation-delay: $transitionDelayBase * 3;
+
+        &:after {
+          top: 71px;
+          left: 48px;
+        }
+      }
+
+      &:nth-child(4) {
+        animation-delay: $transitionDelayBase * 4;
+
+        &:after {
+          top: 72px;
+          left: 40px;
+        }
+      }
+      &:nth-child(5) {
+        animation-delay: $transitionDelayBase * 5;
+
+        &:after {
+          top: 71px;
+          left: 32px;
+        }
+      }
+      &:nth-child(6) {
+        animation-delay: $transitionDelayBase * 6;
+
+        &:after {
+          top: 68px;
+          left: 24px;
+        }
+      }
+      &:nth-child(7) {
+        animation-delay: $transitionDelayBase * 7;
+
+        &:after {
+          top: 63px;
+          left: 17px;
+        }
+      }
+      &:nth-child(8) {
+        animation-delay: $transitionDelayBase * 8;
+
+        &:after {
+          top: 56px;
+          left: 12px;
+        }
+      }
+    }
+  }
+}
